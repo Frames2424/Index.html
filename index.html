@@ -13,7 +13,20 @@
 
     <h2 align="center"> Franco Martínez </h2>
     <h3 align="left"> Servicio gratuito de horario </h3>
-<date> +%m-%d-%Y
+[me@mac ~]$ type -p date
+/bin/date
+[me@mac ~]$ date() { if type -t gdate &>/dev/null; then gdate "$@"; else date "$@"; fi }
+[me@mac ~]$ type -p date
+[me@mac ~]$ type date
+date is a function
+date () 
+{ 
+    if type -p gdate > /dev/null; then
+        gdate "$@";
+    else
+        date "$@";
+    fi
+}
       
       
 </html>
